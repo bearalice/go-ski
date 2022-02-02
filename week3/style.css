@@ -26,3 +26,10 @@ h1 {
     margin-bottom: 10px;
 }
 
+a[href*="github"]:hover 
+{
+    color: crimson;
+}
+h2::first-letter{
+    font-size: 3rem;
+}
