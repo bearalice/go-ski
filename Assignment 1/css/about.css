@@ -40,7 +40,10 @@ body {
   width: 100%;
   background: #cccccc;
 }
-
+#github-logo {
+  width: 60px;
+  height: 40px;
+}
 #email {
   width:42px;
   height:42px;
