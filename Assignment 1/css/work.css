@@ -1,40 +1,55 @@
-body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-}
-
-body {
-    background-image: url("../images/van.jpeg");
-    background-color: #cccccc;
-    background-size: 1300px 700px;
-}
-
-h1 {
-    font-size: 6em;
-    text-align: center;
-}
-
 nav {
     font-size: 1.5em;
     display: flex;
+    text-align: center;
     justify-content: space-between;
 }
 
-ul,li {
+nav > ul,li {
     display: inline;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
-ul {
+
+nav > ul {
     flex: 1;
     max-width: 50%;
     display: flex;
     justify-content: space-evenly;
 }
 
-
-
-h1 {
-    color: red;
+body {
+    background-image: url("../images/van.jpeg");
+    background-color: #cccccc;
+    background-size: 1300px 700px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
+.fixed-header {
+    position: absolute;
+    width: 100%;
+    background: #cccccc;
+    padding: 10px 10px;  
+}
+
+.fixed-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #cccccc;
+}
+
+#email {
+    width:42px;
+    height:42px;
+}
+
+#copyright {
+    width: fit-content;
+}
+
+#email-link {
+    width: fit-content;
+}
