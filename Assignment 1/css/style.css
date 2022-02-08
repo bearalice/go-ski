@@ -62,3 +62,6 @@ body {
 #email-link {
     width: fit-content;
 }
+a:visited {
+    color: gray;
+  }

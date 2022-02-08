@@ -56,3 +56,11 @@ body {
 #email-link {
   width: fit-content;
 }
+
+#intro {
+  height: 80vh;
+}
+
+a:visited {
+  color: gray;
+}
