@@ -1,0 +1,40 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-image: url("../images/van.jpeg");
+    background-color: #cccccc;
+    background-size: 1300px 700px;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+h1 {
+    color: red;
+}
+
