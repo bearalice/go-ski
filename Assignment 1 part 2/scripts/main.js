@@ -15,17 +15,18 @@ displayButton.addEventListener("click", () => {
     // show the output:
     let currentDate = new Date().toDateString();
     let currentTime = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-    //let displayText = document.createElement('p');
+    let displayText = document.createElement('p');
     const displayArea = document.querySelector("#displayTimeDate");
+    displayArea.innerHTML = '';
     if (selectedItem === "date") {
-        //displayText.innerText = currentDate;
-        displayArea.innerText = currentDate;
+        displayText.innerText = currentDate;
+        //displayArea.innerText = currentDate;
     } else {
-        //displayText.innerText = currentTime;
-        displayArea.innerText = currentTime;
+        displayText.innerText = currentTime;
+        //displayArea.innerText = currentTime;
     }
     //const displayArea = document.querySelector("#displayTimeDate");
-    //displayArea.append(displayText);
+    displayArea.append(displayText);
 });
 
 
