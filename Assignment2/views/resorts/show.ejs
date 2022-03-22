@@ -1,0 +1,30 @@
+<% layout('layout')%>
+    <link rel="stylesheet" href="/stylesheets/stars.css">
+    <div class="row">
+        <div class="col-6">
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= resort.title%>
+                    </h5>
+                    <p class="card-text">
+                        <%= resort.description%>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted">
+                        <%= resort.location%>
+                    </li>
+
+                    <li class="list-group-item">$<%= resort.price%>/night</li>
+                </ul>
+
+            </div>
+            <div class="card-body">
+                <a class="card-link btn btn-info" href="/resorts/<%=resort._id%>/edit">Edit</a>
+                <form class="d-inline" action="/resorts/<%=resort._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
