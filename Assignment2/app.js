@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require('express');
+const ExpressError = require('./utilities/ExpressError');
 const resorts = require('./routes/skiResorts.js');
 const methodOverride = require('method-override');
 //const db = require('./db.js');
@@ -42,10 +43,21 @@ app.use(methodOverride('_method'));
 app.use('/resorts', resorts);
 
 
+
 app.get('/', function (req, res) {
     res.render('home');
     console.log("home success!");
 });
+
+app.all('*', (req, res, next) => {
+    next(new ExpressError('Sorry! Page Not Found', 404))
+})
+
+// app.use((err, req, res, next) => {
+//     const { statusCode = 500 } = err;
+//     if (!err.message) err.message = 'something is wrong here >_<'
+//     res.status(statusCode).render('error', { err })
+// })
 
 app.listen(port, () => {
     console.log("SNOWY running on 8000");
