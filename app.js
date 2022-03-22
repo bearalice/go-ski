@@ -50,14 +50,15 @@ app.get('/', function (req, res) {
 });
 
 app.all('*', (req, res, next) => {
-    next(new ExpressError('Sorry! Page Not Found', 404))
+    res.status(404).send("Sorry! Page Not Found");
+    // next(new ExpressError('Sorry! Page Not Found', 404))
 })
 
-// app.use((err, req, res, next) => {
-//     const { statusCode = 500 } = err;
-//     if (!err.message) err.message = 'something is wrong here >_<'
-//     res.status(statusCode).render('error', { err })
-// })
+app.use((err, req, res, next) => {
+    const { statusCode = 500 } = err;
+    if (!err.message) err.message = 'something is wrong here >_<'
+    res.status(statusCode).render('error', { err })
+})
 
 app.listen(port, () => {
     console.log("SNOWY running on 8000");
