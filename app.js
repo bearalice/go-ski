@@ -12,7 +12,7 @@ const path = require('path');
 const ejsMate = require('ejs-mate');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const uri = process.env.URI;
 const mongoose = require('mongoose');
